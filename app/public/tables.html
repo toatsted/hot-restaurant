@@ -58,4 +58,16 @@
 
 	</div>
 
-</body><!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS LOADED FROM OUR SERVER --></html>
+</body><!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS LOADED FROM OUR SERVER -->
+
+<script type="text/javascript">
+      $.get("/api/tables/", function(data) {
+        console.log(data);
+		for (var i = 0; i < data.length; i++){
+			$("#tableSection").append('<h2><span class="label label-primary">' + (i + 1) + '</span> | ' + data[i].uniqueID)
+		}
+      });
+</script>
+
+
+</html>
