@@ -12,7 +12,7 @@ module.exports = function(app, tables, waitlist){
 	app.post("/api/tables", function(req, res) {
 	    let newTable = req.body;
 
-	    if(tables.length < 6)
+	    if(tables.length < 5)
 		    tables.push(newTable);
 	    else
 	  	    waitlist.push(newTable)
