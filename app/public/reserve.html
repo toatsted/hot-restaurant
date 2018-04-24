@@ -99,13 +99,13 @@
 				name: $("#reserve_name").val().trim(),
 				phone: $("#reserve_phone").val().trim(),
 				email: $("#reserve_email").val().trim(),
-				uniqueID: $("#uniqueID").val().trim()
+				uniqueID: $("#reserve_uniqueID").val().trim()
 			}
 			console.log(newReservation)
 
 			$.post("api/tables", newReservation)
-				.then(() => {
-					alert("Your reservation is set!")
+				.then((data) => {
+					alert("Your reservation is set!");
 				})
 
 			// Clears user input fields
